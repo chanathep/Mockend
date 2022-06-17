@@ -5,28 +5,38 @@ git clone https://github.com/chanathep/Mockend.git
 Create a .mockend.json file with the following basic config on your repo:
 
 github.com/org/repo/.mockend.json
+```
 {
   "User": {
     "title": { "string": {} }
   }
 }
+```
+
 Try your new mock server:
 
 # 1. List your fake users with a GET request
+```
 curl https://mockend.com/org/repo/users
+```
 
 # 2. Fake a creation with a POST
 # (don't worry changes aren't persisted)
+```
 curl https://mockend.com/org/repo/users \
   -X POST \
   -H "Content-Type: application/json" \
   --data '{"name": "alice"}'
+```
 
 # 3. Access your GraphQL endpoint
+```
 https://mockend.com/org/repo/graphql
+```
 Test other random generators with this config:
 
 github.com /org/repo/ .mockend.json
+```
 {
   "User": {
     "name": {
@@ -58,4 +68,5 @@ github.com /org/repo/ .mockend.json
     }
   }
 }
+```
 See documentation for more details.
